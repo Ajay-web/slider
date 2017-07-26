@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>原生JS实现slider效果</title>
+    <script src="fastclick.js"></script>
     <script src="slider.js"></script>
     <style>
       *{ box-sizing: border-box; }
@@ -28,7 +29,10 @@
     
 
     <script>
-      var _A = new slider('#slider');
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+      var _A = new Slider('#slider');
     </script>
   </body>
 </html>
